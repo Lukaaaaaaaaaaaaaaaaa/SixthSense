@@ -186,7 +186,7 @@ public class Moinster : MonoBehaviour
                 loseStamina = false;
             }
 
-            Rigidbody.MovePosition(transform.position + actualDirection);
+            rb.MovePosition(transform.position + actualDirection);
         }
 
        
