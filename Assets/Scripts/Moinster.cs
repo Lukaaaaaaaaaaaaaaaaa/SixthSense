@@ -37,6 +37,8 @@ public class Moinster : MonoBehaviour
     public bool isMoving = false;
     public bool loseStamina = false;
 
+    private Animator animator;
+
 
     public bool canMove = false;
     //public loadCam LoadCam;
@@ -55,7 +57,7 @@ public class Moinster : MonoBehaviour
 
     private void Start()
     {
-        
+        animator = GetComponent<Animator>();
         //LoadCam = FindObjectOfType<loadCam>();   
        //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
@@ -172,6 +174,7 @@ public class Moinster : MonoBehaviour
             Vector3 actualDirection = forwardDirection + sidewaysDirection;
             actualDirection *= Time.deltaTime * speed;
 
+            animator.SetBool("IsMoving", true);
 
             if (isSprint)
             {
@@ -187,6 +190,10 @@ public class Moinster : MonoBehaviour
             }
 
             rb.MovePosition(transform.position + actualDirection);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
         }
 
        
