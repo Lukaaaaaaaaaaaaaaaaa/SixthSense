@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
     {
         if (TimeLeft == 0)
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Defeat");
         }
 
         if (TimerOn)

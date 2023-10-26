@@ -16,7 +16,7 @@ public class StaminaBar : MonoBehaviour
     public Moinster monster;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         maxstamina = 100;
         staminaBar.maxValue = maxstamina;
