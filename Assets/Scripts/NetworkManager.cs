@@ -19,6 +19,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public string gameVersion;
     string networkStatus;
 
+    public bool spawnMonster = false;
+
+    public List<GameObject> playerCount = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +55,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         base.OnJoinedLobby();
         networkStatus = "Joined Lobby";
         PhotonNetwork.JoinRandomOrCreateRoom(); //Either creates or joins a random room
+
+       
     }
 
     //Gets called when the player has joined a room
@@ -60,6 +66,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), Random.Range(minZ, maxZ), Random.Range(minY, maxY));
 
-        PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
+        if (spawnMonster)
+        {
+            PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate("Survivor", spawnPos, Quaternion.identity);
+
+        }
+    }
+
+
+    public void ChooseMonster()
+    {
+        float monsterPlayer = Random.Range(1, 4);
+
+        
+
+        
+        
     }
 }

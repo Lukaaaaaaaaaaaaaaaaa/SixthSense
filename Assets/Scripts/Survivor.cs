@@ -7,9 +7,8 @@ using UnityEngine.InputSystem;
 using Photon.Pun;
 using System;
 
-public class Moinster : MonoBehaviour
+public class Survivor : MonoBehaviour
 {
-
     Rigidbody rb;
     Playercontrols playercontrols;
 
@@ -33,12 +32,11 @@ public class Moinster : MonoBehaviour
 
     public bool isSprint = false;
 
-
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
 
-    public Animator animator;
+    //private Animator animator;
 
 
     public bool canMove = false;
@@ -49,8 +47,6 @@ public class Moinster : MonoBehaviour
     PhotonView view;
     public List<GameObject> playersStuff = new List<GameObject>();
 
-
-
     private void OnEnable()
     {
         canvas.SetActive(false);
@@ -58,14 +54,15 @@ public class Moinster : MonoBehaviour
 
     private void Start()
     {
+        //animator = GetComponent<Animator>();
         //LoadCam = FindObjectOfType<loadCam>();   
-       //timer = FindObjectOfType<Timer>();
+        //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
 
         if (view.IsMine)
         {
-            foreach(GameObject stuff in playersStuff)
+            foreach (GameObject stuff in playersStuff)
             {
                 stuff.SetActive(true);
                 SetupInputs();
@@ -77,7 +74,7 @@ public class Moinster : MonoBehaviour
         }
 
         //timer.TimerOn = true;
-       //LoadCam.gameObject.SetActive(false);
+        //LoadCam.gameObject.SetActive(false);
     }
 
     void SetupInputs()
@@ -134,17 +131,17 @@ public class Moinster : MonoBehaviour
         GroundCheck();
         RotateCamera();
 
-        if(staminaBar.stamina <= 0)
+        if (staminaBar.stamina <= 0)
         {
             canSprint = false;
         }
-        else if(staminaBar.stamina >= 1)
+        else if (staminaBar.stamina >= 1)
         {
             canSprint = true;
-           
+
         }
 
-        if(canSprint == false)
+        if (canSprint == false)
         {
             isSprint = false;
         }
@@ -152,13 +149,8 @@ public class Moinster : MonoBehaviour
         if (!isMoving)
         {
             canSprint = false;
-            animator.SetBool("IsMoving", false);
         }
 
-        if (isMoving)
-        {
-            animator.SetBool("IsMoving", true);
-        }
 
     }
 
@@ -167,7 +159,7 @@ public class Moinster : MonoBehaviour
         MovePlayer();
     }
 
-    
+
 
     void MovePlayer()
     {
@@ -179,9 +171,7 @@ public class Moinster : MonoBehaviour
             Vector3 actualDirection = forwardDirection + sidewaysDirection;
             actualDirection *= Time.deltaTime * speed;
 
-            
-
- 
+            //animator.SetBool("IsMoving", true);
 
             if (isSprint)
             {
@@ -198,8 +188,9 @@ public class Moinster : MonoBehaviour
 
             rb.MovePosition(transform.position + actualDirection);
         }
-
        
+
+
     }
 
     void RotateCamera()
@@ -211,20 +202,4 @@ public class Moinster : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
-
-    // Update is called once per frame
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (view.IsMine)
-        {
-            if (other.gameObject.tag == ("Enemy"))
-            {
-                GameMan.health -= 1;
-                Debug.Log("AUSSSIEEEEE");
-            }
-        }
-    }
-    
 }

@@ -29,6 +29,7 @@ public class GameStart : MonoBehaviour
         if(players.Count == playerCount)
         {
             StartGame();
+            loadCam.SetActive(false);
         }
 
     }
@@ -36,7 +37,6 @@ public class GameStart : MonoBehaviour
     public void AddMonster()
     {
         Moinster monster = FindObjectOfType<Moinster>();
-        monster.GetComponent<Moinster>().canvas.SetActive(false);
         if (monster.isActiveAndEnabled)
         {
             if (!players.Contains(monster.gameObject))
@@ -49,11 +49,15 @@ public class GameStart : MonoBehaviour
 
     public void AddPlayer()
     {
-        PlayerControls[] playerCharcaters = FindObjectsOfType<PlayerControls>();
+        Survivor[] playerCharcaters = FindObjectsOfType<Survivor>();
 
         for (int i = 0; i < playerCharcaters.Length; i++)
         {
-            players.Add(playerCharcaters[i].gameObject);
+            if (!players.Contains(playerCharcaters[i].gameObject))
+            {
+                players.Add(playerCharcaters[i].gameObject);
+            }
+            
         }
     }
 
@@ -66,5 +70,7 @@ public class GameStart : MonoBehaviour
         monster.canMove = true;
 
         monster.canvas.SetActive(true);
+
+
     }
 }
