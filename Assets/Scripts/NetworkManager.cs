@@ -66,7 +66,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
+            PhotonNetwork.Instantiate("Survivor2", spawnPos, Quaternion.identity);
         }
         else
         {
