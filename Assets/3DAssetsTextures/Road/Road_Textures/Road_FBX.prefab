@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7616358489980790727}
   - component: {fileID: 5644781613834638093}
   - component: {fileID: 7321672023538041216}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Road_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
