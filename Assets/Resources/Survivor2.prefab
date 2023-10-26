@@ -1253,7 +1253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7139444444372502864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 1.74, z: 0.66}
+  m_LocalPosition: {x: -0.3, y: 1.971, z: -4.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1770,6 +1770,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 06205f1edb288d74080092db8f892e06, type: 2}
+    - target: {fileID: 2119670802620339374, guid: a0fd31b1dd864834eb1c3bbb84ff77ec,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119670802620339374, guid: a0fd31b1dd864834eb1c3bbb84ff77ec,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[0].Name
+      value: IsMoving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119670802620339374, guid: a0fd31b1dd864834eb1c3bbb84ff77ec,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[0].Type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5826992915328188124, guid: a0fd31b1dd864834eb1c3bbb84ff77ec,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1850,6 +1865,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2410ee7e488cf964aa2fc709d85ceacc, type: 2}
+    - target: {fileID: 8096802273857443304, guid: a0fd31b1dd864834eb1c3bbb84ff77ec,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e452384370c256b4e9c5994199662c7c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0fd31b1dd864834eb1c3bbb84ff77ec, type: 3}
 --- !u!4 &1944160411487227560 stripped
