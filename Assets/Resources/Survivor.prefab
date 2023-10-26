@@ -260,15 +260,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2953201101594825244}
   - component: {fileID: 2953201101594825240}
-  - component: {fileID: 2953201101594825237}
   - component: {fileID: 2953201101594825246}
   - component: {fileID: 2953201101594825247}
   - component: {fileID: 2953201101594825241}
   - component: {fileID: 2024162409666403144}
   - component: {fileID: 38059901412831879}
   - component: {fileID: 1304625146590584749}
-  - component: {fileID: 38059901412831872}
   - component: {fileID: 38059901412831873}
+  - component: {fileID: -4950490632600335800}
+  - component: {fileID: 1891804216211479041}
   m_Layer: 7
   m_Name: Survivor
   m_TagString: Player
@@ -312,19 +312,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!65 &2953201101594825237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2953201101594825218}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.0354748, z: 1}
-  m_Center: {x: 0, y: 0.0006419911, z: 0}
 --- !u!114 &2953201101594825246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,38 +436,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &38059901412831872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2953201101594825218}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5faa07c15e0579448bd0ab99f47b8aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  staminaBar: {fileID: 2304469164071494063}
-  canvas: {fileID: 8639673498286762793}
-  speed: 12
-  gravity: -9.8
-  jumpHeight: 3
-  runSpeed: 40
-  walkSpeed: 20
-  groundCheck: {fileID: 1770064611969912188}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  isSprint: 0
-  canSprint: 1
-  isMoving: 0
-  loseStamina: 0
-  canMove: 1
-  playersStuff:
-  - {fileID: 8639673498286762793}
-  - {fileID: 2953201101955830571}
 --- !u!114 &38059901412831873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +467,55 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-4950490632600335800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953201101594825218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d250247ecf08d344bb99aac7b6e559f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBar: {fileID: 2304469164071494063}
+  canvas: {fileID: 8639673498286762793}
+  speed: 40
+  gravity: -500
+  jumpHeight: 650
+  runSpeed: 70
+  walkSpeed: 40
+  groundCheck: {fileID: 1770064611969912188}
+  groundDistance: 1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  isSprint: 0
+  canSprint: 1
+  isMoving: 0
+  loseStamina: 0
+  animator: {fileID: 0}
+  canMove: 0
+  playersStuff:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!136 &1891804216211479041
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953201101594825218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2953201101955830571
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770064611969912188}
   m_Layer: 7
-  m_Name: GameObject
+  m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,7 +742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5568468792116415418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.051, z: -1.33}
+  m_LocalPosition: {x: 0.09, y: -1.051, z: -0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
