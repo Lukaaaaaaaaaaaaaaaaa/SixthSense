@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
+    public static GameStart instance;
+
     public GameObject loadCam;
 
     public List<GameObject> players = new List<GameObject>();
@@ -15,16 +17,17 @@ public class GameStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        /*
         AddMonster();
         AddPlayer();
-
+        */
         
         if(players.Count == playerCount)
         {
@@ -34,31 +37,9 @@ public class GameStart : MonoBehaviour
 
     }
 
-    public void AddMonster()
+    public void AddPlayer(GameObject obj)
     {
-        Moinster monster = FindObjectOfType<Moinster>();
-        if (monster.isActiveAndEnabled)
-        {
-            if (!players.Contains(monster.gameObject))
-            {
-                players.Add(monster.gameObject);
-            }
-            
-        }
-    }
-
-    public void AddPlayer()
-    {
-        Survivor[] playerCharcaters = FindObjectsOfType<Survivor>();
-
-        for (int i = 0; i < playerCharcaters.Length; i++)
-        {
-            if (!players.Contains(playerCharcaters[i].gameObject))
-            {
-                players.Add(playerCharcaters[i].gameObject);
-            }
-            
-        }
+        players.Add(obj);
     }
 
     public void StartGame()

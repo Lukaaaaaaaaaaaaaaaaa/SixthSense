@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f898a366486b694a8587206e9f48193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMonster: 0
 --- !u!114 &2953201101594825247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2953201101594825218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5faa07c15e0579448bd0ab99f47b8aa5, type: 3}
   m_Name: 
@@ -477,7 +478,9 @@ MonoBehaviour:
   isMoving: 0
   loseStamina: 0
   canMove: 0
-  playersStuff: []
+  playersStuff:
+  - {fileID: 8639673498286762793}
+  - {fileID: 2953201101955830571}
 --- !u!114 &38059901412831873
 MonoBehaviour:
   m_ObjectHideFlags: 0

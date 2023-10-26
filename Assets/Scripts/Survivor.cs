@@ -59,7 +59,7 @@ public class Survivor : MonoBehaviour
         //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
-
+        SetupInputs();
         if (view.IsMine)
         {
             foreach (GameObject stuff in playersStuff)
@@ -79,6 +79,8 @@ public class Survivor : MonoBehaviour
 
     void SetupInputs()
     {
+        Debug.Log("setup inputs");
+
         playercontrols = new Playercontrols();
         playercontrols.Gameplay.Movement.performed += Movement_performed;
         playercontrols.Gameplay.Movement.canceled += Movement_canceled;
