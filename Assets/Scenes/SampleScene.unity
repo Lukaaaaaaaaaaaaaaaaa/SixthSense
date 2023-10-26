@@ -4895,5 +4895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Survivor2
       objectReference: {fileID: 0}
+    - target: {fileID: 7139444444816803961, guid: 1cbfa1dbce7162244a78deb11e991d61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cbfa1dbce7162244a78deb11e991d61, type: 3}
