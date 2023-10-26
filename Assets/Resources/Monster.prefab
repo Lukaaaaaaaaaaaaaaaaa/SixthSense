@@ -749,7 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 100
   staminaBar: {fileID: 8319976342365696596}
-  dValue: 15
+  dValue: 30
   decreaseStamina: 0
   monster: {fileID: 5209132895222808314}
   survivor: {fileID: 0}
