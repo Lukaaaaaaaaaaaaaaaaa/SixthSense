@@ -169,7 +169,7 @@ public class Moinster : MonoBehaviour
 
     
 
-    void MovePlayer()
+    private void MovePlayer()
     {
         if (canMove)
         {
@@ -177,7 +177,7 @@ public class Moinster : MonoBehaviour
             Vector3 sidewaysDirection = transform.right * moveDirection.x;
 
             Vector3 actualDirection = forwardDirection + sidewaysDirection;
-            actualDirection *= Time.deltaTime * speed;
+            actualDirection *= Time.fixedDeltaTime * speed;
 
             
 
@@ -187,7 +187,7 @@ public class Moinster : MonoBehaviour
             {
                 if (canSprint)
                 {
-                    actualDirection *= Time.deltaTime * runSpeed;
+                    actualDirection *= Time.fixedDeltaTime * runSpeed;
                     loseStamina = true;
                 }
             }
