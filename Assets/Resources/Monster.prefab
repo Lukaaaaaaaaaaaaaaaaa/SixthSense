@@ -219,6 +219,8 @@ GameObject:
   - component: {fileID: 1767508783438183371}
   - component: {fileID: 294704731489538564}
   - component: {fileID: 9066302632469224417}
+  - component: {fileID: 871446464138534606}
+  - component: {fileID: 2130346961500286776}
   m_Layer: 7
   m_Name: Monster
   m_TagString: Player
@@ -312,6 +314,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 3200889327302242972}
   - {fileID: 1767508783438183371}
+  - {fileID: 2130346961500286776}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -414,6 +417,30 @@ CapsuleCollider:
   m_Height: 4.2242985
   m_Direction: 1
   m_Center: {x: 0, y: 0.8634078, z: 0}
+--- !u!81 &871446464138534606
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200889327302242945}
+  m_Enabled: 1
+--- !u!114 &2130346961500286776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200889327302242945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3200889327536300851
 GameObject:
   m_ObjectHideFlags: 0
