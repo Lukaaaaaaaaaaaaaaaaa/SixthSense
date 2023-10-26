@@ -7,8 +7,9 @@ using UnityEngine.InputSystem;
 using Photon.Pun;
 using System;
 
-public class Survivor : MonoBehaviour
+public class Test : MonoBehaviour
 {
+
     Rigidbody rb;
     Playercontrols playercontrols;
 
@@ -32,11 +33,12 @@ public class Survivor : MonoBehaviour
 
     public bool isSprint = false;
 
+
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
 
-    //private Animator animator;
+    public Animator animator;
 
 
     public bool canMove = false;
@@ -47,6 +49,8 @@ public class Survivor : MonoBehaviour
     PhotonView view;
     public List<GameObject> playersStuff = new List<GameObject>();
 
+
+
     private void OnEnable()
     {
         canvas.SetActive(false);
@@ -54,12 +58,11 @@ public class Survivor : MonoBehaviour
 
     private void Start()
     {
-        //animator = GetComponent<Animator>();
         //LoadCam = FindObjectOfType<loadCam>();   
         //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
-        SetupInputs();
+
         if (view.IsMine)
         {
             foreach (GameObject stuff in playersStuff)
@@ -79,8 +82,6 @@ public class Survivor : MonoBehaviour
 
     void SetupInputs()
     {
-        Debug.Log("setup inputs");
-
         playercontrols = new Playercontrols();
         playercontrols.Gameplay.Movement.performed += Movement_performed;
         playercontrols.Gameplay.Movement.canceled += Movement_canceled;
@@ -151,8 +152,13 @@ public class Survivor : MonoBehaviour
         if (!isMoving)
         {
             canSprint = false;
+            animator.SetBool("IsMoving", false);
         }
 
+        if (isMoving)
+        {
+            animator.SetBool("IsMoving", true);
+        }
 
     }
 
@@ -173,13 +179,15 @@ public class Survivor : MonoBehaviour
             Vector3 actualDirection = forwardDirection + sidewaysDirection;
             actualDirection *= Time.fixedDeltaTime * speed;
 
-            //animator.SetBool("IsMoving", true);
+
+
+
 
             if (isSprint)
             {
                 if (canSprint)
                 {
-                    actualDirection *= Time.deltaTime * runSpeed;
+                    actualDirection *= Time.fixedDeltaTime * runSpeed;
                     loseStamina = true;
                 }
             }
@@ -190,7 +198,6 @@ public class Survivor : MonoBehaviour
 
             rb.MovePosition(transform.position + actualDirection);
         }
-       
 
 
     }
@@ -204,4 +211,20 @@ public class Survivor : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
+
+    // Update is called once per frame
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (view.IsMine)
+        {
+            if (other.gameObject.tag == ("Enemy"))
+            {
+                GameMan.health -= 1;
+                Debug.Log("AUSSSIEEEEE");
+            }
+        }
+    }
+
 }
