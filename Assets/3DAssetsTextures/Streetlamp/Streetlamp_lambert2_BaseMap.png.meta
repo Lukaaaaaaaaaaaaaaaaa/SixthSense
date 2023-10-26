@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/3DAssetsTextures/SideWalks/Road_Textures/Road_FBX_standardSurface1_AlbedoTransparency.png.meta
 guid: d02911aa0c2d5904bb5d4c2cb1eb69a1
-========
-guid: 55126d5a519fb254b8f80a8d1c490688
->>>>>>>> 82918e9e54fb3b9ce579e180ae9d142b81d504d7:Assets/3DAssetsTextures/Streetlamp/Streetlamp_lambert2_BaseMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
