@@ -15,6 +15,8 @@ public class StaminaBar : MonoBehaviour
 
     public Moinster monster;
 
+    public Survivor survivor;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -23,6 +25,8 @@ public class StaminaBar : MonoBehaviour
         stamina = staminaBar.value;
 
         stamina = maxstamina;
+
+        survivor = GetComponentInParent<Survivor>();
     }
 
     // Update is called once per frame
