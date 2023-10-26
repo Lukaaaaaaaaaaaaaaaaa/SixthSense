@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3882687992555881185}
   - component: {fileID: 1611068827458747818}
   m_Layer: 0
-  m_Name: Archway (12)
+  m_Name: ArchwayPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
