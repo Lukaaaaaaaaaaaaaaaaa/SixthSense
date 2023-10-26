@@ -70,7 +70,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
+            PhotonNetwork.Instantiate("Survivor", spawnPos, Quaternion.identity);
 
         }
     }
