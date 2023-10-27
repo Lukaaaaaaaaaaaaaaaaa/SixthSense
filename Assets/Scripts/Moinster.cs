@@ -222,7 +222,16 @@ public class Moinster : MonoBehaviour
     void Update()
     {
 
-        
+        if (Dead.activeInHierarchy)
+        {
+            DeadCam.SetActive(true);
+            if (!isDead)
+            {
+                isDead = true;
+            }
+            animator.SetBool("Dead", true);
+            monster.enabled = false;
+        }
 
         GroundCheck();
         RotateCamera();
@@ -273,16 +282,7 @@ public class Moinster : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Dead.activeInHierarchy)
-        {
-            DeadCam.SetActive(true);
-            if (!isDead)
-            {
-                isDead = true;
-            }
-            animator.SetBool("Dead", true);
-            monster.enabled = false;
-        }
+        
 
         MovePlayer();
     }
