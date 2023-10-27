@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DIE : MonoBehaviour
 {
-    Moinster player;
+    public Moinster player;
 
     public DeathManager deathManager;
 
@@ -17,9 +17,13 @@ public class DIE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<Moinster>().dead)
+        if (player.dead)
         {
-            deathManager.GetComponent<DeathManager>().players.Add(gameObject.GetComponent<Moinster>());
+            if (!deathManager.players.Contains(gameObject))
+            {
+                deathManager.players.Add(gameObject);
+            }
+            
         }
     }
 }
