@@ -184,7 +184,7 @@ public class Moinster : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && view.IsMine)
         {
-            other.gameObject.GetComponent<GameMan>().health--;
+            other.gameObject.GetComponent<GameMan>().SendDamage();
             Debug.Log("FUCKINAYYY");
         }
 
@@ -296,7 +296,7 @@ public class Moinster : MonoBehaviour
     //    {
     //        if (other.gameObject.tag == ("Enemy"))
     //        {
-    //            GameMan.health -= 1;
+    //            
     //            Debug.Log("AUSSSIEEEEE");
     //        }
     //    }
