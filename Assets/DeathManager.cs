@@ -14,7 +14,7 @@ public class DeathManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(players.Count == 3)
+        if(players.Count == 2)
         {
             SceneManager.LoadScene(4);
         }
