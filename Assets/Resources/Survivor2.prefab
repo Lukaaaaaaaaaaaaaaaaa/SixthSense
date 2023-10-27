@@ -5742,7 +5742,7 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: IsMoving
   - Type: 4
     SynchronizeType: 0
@@ -5754,7 +5754,7 @@ MonoBehaviour:
     SynchronizeType: 0
     Name: jump
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 2
     LayerIndex: 0
 --- !u!114 &6866259151605076132
 MonoBehaviour:
