@@ -83,7 +83,7 @@ public class Moinster : MonoBehaviour
         //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
-        deathManager = FindObjectOfType<DeathManager>();
+        
 
         if (view.IsMine)
         {
@@ -218,7 +218,7 @@ public class Moinster : MonoBehaviour
     
     void Update()
     {
-        
+        deathManager = FindObjectOfType<DeathManager>();
 
         GroundCheck();
         RotateCamera();
