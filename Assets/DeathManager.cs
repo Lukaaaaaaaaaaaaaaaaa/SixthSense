@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathManager : MonoBehaviour
 {
-    public List<GameObject> players = new List<GameObject>();
+    public List<Moinster> players = new List<Moinster>();
     void Start()
     {
         

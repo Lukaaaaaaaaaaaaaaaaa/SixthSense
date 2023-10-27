@@ -271,7 +271,7 @@ public class Moinster : MonoBehaviour
             animator.SetBool("Dead", true);
             
             monster.enabled = false;
-            deathManager.GetComponent<DeathManager>().players.Add(gameObject);
+            deathManager.GetComponent<DeathManager>().players.Add(gameObject.GetComponent<Moinster>());
 
         }
 
