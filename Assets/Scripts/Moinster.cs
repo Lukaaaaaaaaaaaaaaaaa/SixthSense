@@ -182,16 +182,15 @@ public class Moinster : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isMonster)
+        if (other.gameObject.CompareTag("Player") && view.IsMine)
         {
-            if (other.gameObject.CompareTag("Player") && view.IsMine)
-            {
-                other.gameObject.GetComponent<GameMan>().health --;
-                Debug.Log("FUCKINAYYY");
-            }
+            other.gameObject.GetComponent<GameMan>().health--;
+            Debug.Log("FUCKINAYYY");
         }
 
-       
+
+
+
     }
 
     
