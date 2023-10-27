@@ -1518,9 +1518,9 @@ MonoBehaviour:
   attackCollider: {fileID: 8774394743628883336}
   staminaBar: {fileID: 6058634915203365844}
   canvas: {fileID: 4326216935413264722}
-  speed: 40
+  speed: 50
   gravity: -500
-  jumpHeight: 650
+  jumpHeight: 950
   runSpeed: 70
   walkSpeed: 40
   groundCheck: {fileID: 7139444444513868234}

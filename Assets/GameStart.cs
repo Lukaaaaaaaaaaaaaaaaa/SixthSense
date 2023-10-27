@@ -12,7 +12,7 @@ public class GameStart : MonoBehaviour
 
     public Timer timer;
 
-    public float playerCount = 1;
+    public float playerCount = 3;
 
     bool gameStarted;
 
