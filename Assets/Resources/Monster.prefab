@@ -187,8 +187,8 @@ MonoBehaviour:
   canvas: {fileID: 8319976340670860202}
   speed: 40
   gravity: -500
-  jumpHeight: 650
-  runSpeed: 70
+  jumpHeight: 950
+  runSpeed: 100
   walkSpeed: 40
   groundCheck: {fileID: 3200889327536300850}
   groundDistance: 1
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 100
   staminaBar: {fileID: 8319976342365696596}
-  dValue: 10
+  dValue: 20
   decreaseStamina: 0
   monster: {fileID: 5209132895222808314}
   survivor: {fileID: 0}
