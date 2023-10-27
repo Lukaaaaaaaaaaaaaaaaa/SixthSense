@@ -51,6 +51,9 @@ public class Moinster : MonoBehaviour
     public bool isMonster = false;
 
     public bool canMove = false;
+
+    public GameObject Dead;
+    public GameObject DeadCam;
     //public loadCam LoadCam;
 
     //Timer timer;
@@ -244,6 +247,12 @@ public class Moinster : MonoBehaviour
         if (attack)
         {
             animator.SetBool("AttackBool", true);
+        }
+
+        if (Dead.activeInHierarchy)
+        {
+            DeadCam.SetActive(true);
+            this.enabled = false;
         }
 
     }
