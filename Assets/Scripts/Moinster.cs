@@ -184,9 +184,9 @@ public class Moinster : MonoBehaviour
     {
         if (isMonster)
         {
-            if (other.tag == "Player" && view.IsMine)
+            if (other.gameObject.CompareTag("Player") && view.IsMine)
             {
-                other.gameObject.GetComponent<GameMan>().health -= 1;
+                other.gameObject.GetComponent<GameMan>().health --;
                 Debug.Log("FUCKINAYYY");
             }
         }
