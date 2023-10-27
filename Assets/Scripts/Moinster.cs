@@ -9,6 +9,11 @@ using System;
 
 public class Moinster : MonoBehaviour
 {
+    public bool attack = false;
+    public bool CanAttack = true;
+    public float AttackCoolDown = 1.0f;
+    public GameObject attackCollider;
+
 
     Rigidbody rb;
     Playercontrols playercontrols;
@@ -40,6 +45,7 @@ public class Moinster : MonoBehaviour
 
     public Animator animator;
 
+    public bool isMonster = false;
 
     public bool canMove = false;
     //public loadCam LoadCam;
@@ -93,6 +99,15 @@ public class Moinster : MonoBehaviour
         playercontrols.Gameplay.Sprint.canceled += Sprint_canceled;
 
         playercontrols.Enable();
+
+        playercontrols.Gameplay.Attack.performed += Attack_performed;
+    }
+
+    private void Attack_performed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Attacked");
+        Attack();
+        
     }
 
     private void Sprint_canceled(InputAction.CallbackContext obj)
@@ -128,9 +143,61 @@ public class Moinster : MonoBehaviour
         moveDirection = obj.ReadValue<Vector2>();
         isMoving = true;
     }
+    public void Attack()
+    {
+        if (CanAttack)
+        {
+            attackCollider.SetActive(true);
+            attack = true;
+            CanAttack = false;
+            //play anim
+            StartCoroutine(ResetAttackCoolDown());
+        }
+        
+        
+    }
 
+    IEnumerator ResetAttackCoolDown()
+    {
+        yield return new WaitForSeconds(AttackCoolDown);
+        attackCollider.SetActive(false);
+        attack = false;
+        CanAttack = true;
+    }
+
+    public void SendDamage()
+    {
+        //view.RPC("SendDamage", RpcTarget.Others);
+    }
+
+    public void TakeDamage()
+    {
+        if (view.IsMine)
+        {
+            //Take Damage
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isMonster)
+        {
+            if (other.tag == "Player" && view.IsMine)
+            {
+                GameMan.health -= 1;
+                Debug.Log("FUCKINAYYY");
+            }
+        }
+
+       
+    }
+
+    
     void Update()
     {
+        
+
         GroundCheck();
         RotateCamera();
 
@@ -153,11 +220,19 @@ public class Moinster : MonoBehaviour
         {
             canSprint = false;
             animator.SetBool("IsMoving", false);
+            animator.SetBool("SurvivorMoving", false);
+
         }
 
         if (isMoving)
         {
             animator.SetBool("IsMoving", true);
+            animator.SetBool("SurvivorMoving", true);
+        }
+
+        if (attack)
+        {
+            animator.SetBool("AttackBool", true);
         }
 
     }
@@ -212,19 +287,19 @@ public class Moinster : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (view.IsMine)
-        {
-            if (other.gameObject.tag == ("Enemy"))
-            {
-                GameMan.health -= 1;
-                Debug.Log("AUSSSIEEEEE");
-            }
-        }
-    }
-    
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (view.IsMine)
+    //    {
+    //        if (other.gameObject.tag == ("Enemy"))
+    //        {
+    //            GameMan.health -= 1;
+    //            Debug.Log("AUSSSIEEEEE");
+    //        }
+    //    }
+    //}
+
 }

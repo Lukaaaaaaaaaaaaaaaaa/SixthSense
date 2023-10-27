@@ -196,7 +196,7 @@ public partial class @Playercontrols: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""81b9db2e-4e08-42db-bc81-e235f994042a"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
