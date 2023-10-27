@@ -274,7 +274,7 @@ public class Moinster : MonoBehaviour
             
             animator.SetBool("Dead", true);
             
-            monster.enabled = false;
+            //monster.enabled = false;
             
 
         }
