@@ -63,7 +63,7 @@ public class Moinster : MonoBehaviour
 
     Moinster monster;
 
-    public DeathManager deathManager;
+   
 
 
     PhotonView view;
@@ -75,7 +75,7 @@ public class Moinster : MonoBehaviour
     {
         canvas.SetActive(false);
 
-        deathManager = FindObjectOfType<DeathManager>();
+        
     }
 
     private void Start()
@@ -271,7 +271,7 @@ public class Moinster : MonoBehaviour
             animator.SetBool("Dead", true);
             
             monster.enabled = false;
-            deathManager.GetComponent<DeathManager>().players.Add(gameObject.GetComponent<Moinster>());
+            
 
         }
 
