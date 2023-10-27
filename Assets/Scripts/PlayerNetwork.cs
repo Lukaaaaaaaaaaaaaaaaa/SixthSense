@@ -9,6 +9,10 @@ public class PlayerNetwork : MonoBehaviour
     PhotonView photonView;
     public bool isMonster;
 
+    int randomRoll;
+    public GameObject character1;
+    public GameObject character2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,9 @@ public class PlayerNetwork : MonoBehaviour
             {
                 GetComponent<Survivor>().enabled = true;
             }
+
+            randomRoll = Random.Range(0, 100);
+            SetPlayerCharacter();
         }
         else
         {
@@ -40,5 +47,33 @@ public class PlayerNetwork : MonoBehaviour
         }
 
 
+    }
+
+    public void SetPlayerCharacter()
+    {
+        if(randomRoll > 50)
+        {
+            character1.SetActive(false);
+        }
+        else
+        {
+            character2.SetActive(false);
+        }
+
+        photonView.RPC("SendPlayerCharacter", RpcTarget.Others, randomRoll);
+    }
+
+    [PunRPC]
+    public void SendPlayerCharacter(int roll)
+    {
+        randomRoll = roll;
+        if (randomRoll > 50)
+        {
+            character1.SetActive(false);
+        }
+        else
+        {
+            character2.SetActive(false);
+        }
     }
 }
