@@ -185,6 +185,7 @@ public class Moinster : MonoBehaviour
         {
             if (other.tag == "Player" && view.IsMine)
             {
+                GameMan.health -= 1;
                 Debug.Log("FUCKINAYYY");
             }
         }
@@ -286,7 +287,7 @@ public class Moinster : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
 
 
     //private void OnTriggerEnter(Collider other)
@@ -300,5 +301,5 @@ public class Moinster : MonoBehaviour
     //        }
     //    }
     //}
-    
+
 }
