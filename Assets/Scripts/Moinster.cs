@@ -43,7 +43,7 @@ public class Moinster : MonoBehaviour
     public bool isMoving = false;
     public bool loseStamina = false;
 
-    public bool dead = false;
+    public bool isDead = false;
     
     //public bool onAttack = false;
 
@@ -260,21 +260,22 @@ public class Moinster : MonoBehaviour
             //animator2.SetBool("SurvivorMoving", true);
         }
 
-
+        if (DeadCam.activeInHierarchy)
+        {
+            isDead = true;
+        }
    
 
         if (Dead.activeInHierarchy)
         {
-            if (!dead)
-            {
-                dead = true;
-            }
-            
+                      
             DeadCam.SetActive(true);
-            
+            if (!isDead)
+            {
+                isDead = true;
+            }
             animator.SetBool("Dead", true);
-            
-            //monster.enabled = false;
+            monster.enabled = false;
             
 
         }

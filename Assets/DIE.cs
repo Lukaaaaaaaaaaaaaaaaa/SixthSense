@@ -17,7 +17,7 @@ public class DIE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.dead)
+        if (player.isDead)
         {
             if (!deathManager.players.Contains(gameObject))
             {

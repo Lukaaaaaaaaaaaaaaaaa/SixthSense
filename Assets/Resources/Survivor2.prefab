@@ -5588,13 +5588,12 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
-  dead: 0
+  isDead: 0
   animator: {fileID: 5618723276610252031}
   isMonster: 0
   canMove: 1
   Dead: {fileID: 4326216934941723982}
   DeadCam: {fileID: 2466625421207089569}
-  deathManager: {fileID: 0}
   playersStuff:
   - {fileID: 4326216935413264722}
   - {fileID: 7139444444372502864}
@@ -5683,6 +5682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be714d85948c4ad499054c763af829b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  deathManager: {fileID: 0}
 --- !u!1 &7159316154056342583
 GameObject:
   m_ObjectHideFlags: 0
