@@ -5587,9 +5587,7 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
-  onAttack: 0
   animator: {fileID: 5618723276610252031}
-  animator2: {fileID: 2107918457827415593}
   isMonster: 0
   canMove: 1
   Dead: {fileID: 4326216934941723982}
@@ -5754,6 +5752,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: jump
+  - Type: 4
+    SynchronizeType: 0
+    Name: onAttack
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -5834,8 +5835,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251256538873381962}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 644d307c7e9cf3843bfb09b97829aeea, type: 3}
-  m_Controller: {fileID: 9100000, guid: 81ea6820716681e40adf8bd8d3bc1700, type: 2}
+  m_Avatar: {fileID: 9000000, guid: e452384370c256b4e9c5994199662c7c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 1b884def7a7c0da4bb52be0c0cc8b23e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5864,6 +5865,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: IsMoving
+  - Type: 4
+    SynchronizeType: 0
+    Name: onAttack
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
