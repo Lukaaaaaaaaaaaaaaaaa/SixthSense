@@ -5755,6 +5755,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: onAttack
+  - Type: 4
+    SynchronizeType: 2
+    Name: Dead
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -5869,6 +5872,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: onAttack
+  - Type: 4
+    SynchronizeType: 2
+    Name: Dead
+  - Type: 4
+    SynchronizeType: 2
+    Name: New Bool
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

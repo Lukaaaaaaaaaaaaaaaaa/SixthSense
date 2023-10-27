@@ -258,7 +258,8 @@ public class Moinster : MonoBehaviour
         if (Dead.activeInHierarchy)
         {
             DeadCam.SetActive(true);
-            
+            monster.enabled = false;
+            animator.SetBool("Dead", true);
         }
 
     }
