@@ -43,11 +43,11 @@ public class Moinster : MonoBehaviour
     public bool isMoving = false;
     public bool loseStamina = false;
     
-    public bool onAttack = false;
+    //public bool onAttack = false;
 
     public Animator animator;
 
-    public Animator animator2;
+    //public Animator animator2;
 
     public bool isMonster = false;
 
@@ -166,16 +166,18 @@ public class Moinster : MonoBehaviour
             animator.SetBool("onAttack", true);
             StartCoroutine(ResetAttackCoolDown());
         }
-        if (!CanAttack)
-        {
-            animator.SetBool("onAttack", false);
-        }
+       
+        //if (!CanAttack)
+        //{
+        //    animator.SetBool("onAttack", false);
+        //}
         
     }
 
     IEnumerator ResetAttackCoolDown()
     {
         yield return new WaitForSeconds(AttackCoolDown);
+        animator.SetBool("onAttack", false);
         attackCollider.SetActive(false);
         attack = false;
         CanAttack = true;
@@ -237,8 +239,8 @@ public class Moinster : MonoBehaviour
             animator.SetBool("IsMoving", false);
             animator.SetBool("SurvivorMoving", false);
 
-            animator2.SetBool("IsMoving", false);
-            animator2.SetBool("SurvivorMoving", false);
+            //animator2.SetBool("IsMoving", false);
+            //animator2.SetBool("SurvivorMoving", false);
 
         }
 
@@ -247,18 +249,14 @@ public class Moinster : MonoBehaviour
             animator.SetBool("IsMoving", true);
             animator.SetBool("SurvivorMoving", true);
 
-            animator2.SetBool("IsMoving", true);
-            animator2.SetBool("SurvivorMoving", true);
+            //animator2.SetBool("IsMoving", true);
+            //animator2.SetBool("SurvivorMoving", true);
         }
 
-        if (attack)
-        {
-            animator.SetBool("AttackBool", true);
-        }
+       
 
         if (Dead.activeInHierarchy)
         {
-            monster.enabled = false;
             DeadCam.SetActive(true);
             
         }
