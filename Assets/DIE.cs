@@ -17,7 +17,7 @@ public class DIE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.Dead.activeInHierarchy)
+        if (player.GetComponent<Moinster>().Dead.activeInHierarchy)
         {
             if (!deathManager.players.Contains(gameObject))
             {
