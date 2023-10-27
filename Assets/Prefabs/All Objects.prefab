@@ -2654,6 +2654,8 @@ Transform:
   - {fileID: 6578390297120703650}
   - {fileID: 4645161515360372211}
   - {fileID: 8770174089009611868}
+  - {fileID: 2584979922379959662}
+  - {fileID: 5894822200599629924}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3890,6 +3892,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4072762607671036617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5894822200599629924}
+  - component: {fileID: 2460363120776941110}
+  m_Layer: 0
+  m_Name: GameObject (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5894822200599629924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072762607671036617}
+  m_LocalRotation: {x: -0, y: 0.016502658, z: -0, w: 0.99986386}
+  m_LocalPosition: {x: -90.99452, y: -4.5, z: 38.6904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2410793987746352397}
+  m_RootOrder: 543
+  m_LocalEulerAnglesHint: {x: 0, y: 1.891, z: 0}
+--- !u!65 &2460363120776941110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072762607671036617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0837708, y: 35.68133, z: 42.93515}
+  m_Center: {x: -0.041885376, y: 8.638277, z: -0.778389}
 --- !u!1 &4089642829081591129
 GameObject:
   m_ObjectHideFlags: 0
@@ -8639,6 +8686,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8982518147070350494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2584979922379959662}
+  - component: {fileID: 6307131335618753508}
+  m_Layer: 0
+  m_Name: GameObject (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2584979922379959662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8982518147070350494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -102.66, y: -4.5, z: 38.759468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2410793987746352397}
+  m_RootOrder: 542
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6307131335618753508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8982518147070350494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0837708, y: 35.68133, z: 42.93515}
+  m_Center: {x: -0.041885376, y: 8.638277, z: -0.778389}
 --- !u!1 &9090462888667420386
 GameObject:
   m_ObjectHideFlags: 0
@@ -8830,7 +8922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9179571576749598978}
   m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: -96.94, y: -3.18, z: 34.8}
+  m_LocalPosition: {x: -96.68, y: -3.84, z: 35.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8848,8 +8940,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.435394, y: 43.73812, z: 1}
-  m_Center: {x: -0.28342438, y: 4.935049, z: 0.000011079343}
+  m_Size: {x: 13.226654, y: 43.73812, z: 1}
+  m_Center: {x: -0.1085968, y: 4.935049, z: 0.0000115115035}
 --- !u!1001 &12581586266798636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9066,6 +9158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -9760,6 +9857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -14681,6 +14783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &2979610983948616852 stripped
@@ -15804,6 +15911,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &4021102066328775349 stripped
@@ -16407,6 +16519,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1353257698693778939}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6789454958886539241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353257698693778939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3281144439627100638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789454958886539241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: 0.000000013038516, y: 0, z: -0.00058387604}
 --- !u!1001 &1394253436246628176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17723,6 +17854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -19387,6 +19523,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2017179707339072840}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6269353336052688730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2017179707339072840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8524528417504828820
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269353336052688730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04948858, y: 0.15185912, z: 0.07324684}
+  m_Center: {x: 0.000000027937503, y: 0, z: -0.0005839057}
 --- !u!1001 &2021712470844977941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20593,6 +20748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -22427,6 +22587,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2672601148071550297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7631839335240556363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2672601148071550297}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5285478930831945650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631839335240556363}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: 0.000000027939677, y: 0, z: -0.00058390584}
 --- !u!1001 &2677518875017692258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24524,6 +24703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &1077890711555695001 stripped
@@ -24598,6 +24782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -29461,6 +29650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &2262863532538742456 stripped
@@ -30116,6 +30310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &2149815050383752180 stripped
@@ -30746,6 +30945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &1902008698360691848 stripped
@@ -31060,6 +31264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -32485,6 +32694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &7243106601601862970 stripped
@@ -32842,6 +33056,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &1116805668666518179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4864152801233889457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1007736470529387424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116805668666518179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: -0.0000000018626456, y: 0, z: -0.00058390584}
 --- !u!4 &4902810648292429658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -32914,6 +33147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -35246,6 +35484,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &500795033202896398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5335762291882224668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5362046708695627623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500795033202896398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: 0.000000013038516, y: 0, z: -0.00058387604}
 --- !u!4 &5586388738561084407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -35318,6 +35575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -38884,6 +39146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &8267669420522819039 stripped
@@ -39357,6 +39624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -39852,6 +40124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -41909,6 +42186,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &1328993710922231858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6813604666169471520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &9186185497921033981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328993710922231858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04948858, y: 0.15185912, z: 0.07324684}
+  m_Center: {x: -0.000000031667142, y: 0, z: -0.0005839057}
 --- !u!4 &6414375075516306891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -42168,6 +42464,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &1320610171238868641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6822106884690093235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7102386769123556454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320610171238868641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488574, y: 0.15185912, z: 0.07324684}
+  m_Center: {x: -0.000000031667142, y: 0, z: -0.0005839355}
 --- !u!4 &6423900449670054744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -42690,6 +43005,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
 --- !u!4 &5066372274487294793 stripped
@@ -42867,6 +43187,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &3202533284646908059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6957761158199161481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7689241987710802223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202533284646908059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: -0.0000000018626456, y: 0, z: -0.00058387604}
 --- !u!4 &7423154386039592290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -43729,6 +44068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
@@ -49683,6 +50027,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2810beeff587e82498b825b26a2b2cfa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774be857f37d872488ed58f0aa1fa7bb, type: 3}
+--- !u!1 &4190440195804629753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5548225718397616658, guid: 774be857f37d872488ed58f0aa1fa7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8563646105923012843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1109474071621453280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190440195804629753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049488593, y: 0.15185912, z: 0.07324685}
+  m_Center: {x: 0.000000027939677, y: 0, z: -0.00058387604}
 --- !u!4 &8165755923706392320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 774be857f37d872488ed58f0aa1fa7bb,
@@ -50795,6 +51158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251237089662738225, guid: 78b544e6dd8f216489e448ff2a32ba94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b544e6dd8f216489e448ff2a32ba94, type: 3}
