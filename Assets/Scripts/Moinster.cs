@@ -222,12 +222,27 @@ public class Moinster : MonoBehaviour
     
     void Update()
     {
-        
+
+       
 
         GroundCheck();
         RotateCamera();
 
-        if(staminaBar.stamina <= 0)
+        if (Dead.activeInHierarchy)
+        {
+            testBool = true;
+            DeadCam.SetActive(true);
+            if (!isDead)
+            {
+                isDead = true;
+            }
+            animator.SetBool("Dead", true);
+            monster.enabled = false;
+
+
+        }
+
+        if (staminaBar.stamina <= 0)
         {
             canSprint = false;
         }
@@ -264,24 +279,8 @@ public class Moinster : MonoBehaviour
 
    
 
-        if (Dead.activeInHierarchy)
-        {
-            testBool = true;
-            DeadCam.SetActive(true);
-            if (!isDead)
-            {
-                isDead = true;
-            }
-            animator.SetBool("Dead", true);
-            monster.enabled = false;
-            
 
-        }
-
-        if (testBool)
-        {
-            isDead = true;
-        }
+       
 
     }
 
