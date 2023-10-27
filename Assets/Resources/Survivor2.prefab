@@ -5587,6 +5587,7 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
+  onAttack: 0
   animator: {fileID: 5618723276610252031}
   animator2: {fileID: 2107918457827415593}
   isMonster: 0

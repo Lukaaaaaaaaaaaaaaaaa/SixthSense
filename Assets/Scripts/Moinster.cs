@@ -43,6 +43,7 @@ public class Moinster : MonoBehaviour
     public bool isMoving = false;
     public bool loseStamina = false;
     
+    public bool onAttack = false;
 
     public Animator animator;
 
@@ -159,10 +160,13 @@ public class Moinster : MonoBehaviour
             attackCollider.SetActive(true);
             attack = true;
             CanAttack = false;
-            //play anim
+            animator.SetBool("onAttack", true);
             StartCoroutine(ResetAttackCoolDown());
         }
-        
+        if (!CanAttack)
+        {
+            animator.SetBool("onAttack", false);
+        }
         
     }
 
