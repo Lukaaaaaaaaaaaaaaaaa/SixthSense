@@ -1850,6 +1850,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: IsMoving
+  - Type: 4
+    SynchronizeType: 2
+    Name: onAttack
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

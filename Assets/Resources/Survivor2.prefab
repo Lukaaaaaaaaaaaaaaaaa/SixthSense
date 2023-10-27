@@ -5744,16 +5744,16 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: IsMoving
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: SurvivorMoving
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: AttackBool
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: jump
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: onAttack
   m_SynchronizeLayers:
   - SynchronizeType: 2
@@ -5793,6 +5793,7 @@ GameObject:
   - component: {fileID: 2107918457827415593}
   - component: {fileID: 7088255006715864948}
   - component: {fileID: 4259066663395409192}
+  - component: {fileID: 1569150209841798559}
   m_Layer: 0
   m_Name: EnzoSiasoco_Character_FBX
   m_TagString: Untagged
@@ -5835,8 +5836,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251256538873381962}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e452384370c256b4e9c5994199662c7c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 1b884def7a7c0da4bb52be0c0cc8b23e, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 644d307c7e9cf3843bfb09b97829aeea, type: 3}
+  m_Controller: {fileID: 9100000, guid: 81ea6820716681e40adf8bd8d3bc1700, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5866,10 +5867,10 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: IsMoving
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: onAttack
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 2
     LayerIndex: 0
 --- !u!114 &4259066663395409192
 MonoBehaviour:
@@ -5894,6 +5895,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1569150209841798559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251256538873381962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dfeff2a2ded65479dfe93ba5b16d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 519391442579211266}
 --- !u!1 &7353995902642802798
 GameObject:
   m_ObjectHideFlags: 0
