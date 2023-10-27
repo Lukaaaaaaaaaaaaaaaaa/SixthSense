@@ -14,6 +14,8 @@ public class GameStart : MonoBehaviour
 
     public float playerCount = 1;
 
+    bool gameStarted;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +30,10 @@ public class GameStart : MonoBehaviour
         AddMonster();
         AddPlayer();
         */
-        
-        if(players.Count == playerCount)
+
+        if (players.Count == playerCount && gameStarted == false)
         {
+            gameStarted = true;
             StartGame();
             loadCam.SetActive(false);
         }
@@ -49,8 +52,6 @@ public class GameStart : MonoBehaviour
         Moinster monster = FindObjectOfType<Moinster>();
 
         monster.canMove = true;
-
-        monster.canvas.SetActive(true);
 
 
     }
