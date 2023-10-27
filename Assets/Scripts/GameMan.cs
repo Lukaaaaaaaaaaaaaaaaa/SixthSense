@@ -6,9 +6,9 @@ public class GameMan : MonoBehaviour
 {
 
     public GameObject gameOver, heart0, heart1, heart2, heart3;
-    public static int health;
-    
-    
+    public int health; //static int health;
+
+
     // Start is called before the first frame update
     void Start()
     {
