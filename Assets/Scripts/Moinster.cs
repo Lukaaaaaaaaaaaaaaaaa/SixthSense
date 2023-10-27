@@ -63,6 +63,8 @@ public class Moinster : MonoBehaviour
 
     Moinster monster;
 
+    DeathManager deathManager;
+
 
     PhotonView view;
     public List<GameObject> playersStuff = new List<GameObject>();
@@ -81,6 +83,7 @@ public class Moinster : MonoBehaviour
         //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
+        deathManager = FindObjectOfType<DeathManager>();
 
         if (view.IsMine)
         {
@@ -263,6 +266,7 @@ public class Moinster : MonoBehaviour
             DeadCam.SetActive(true);
             monster.enabled = false;
             animator.SetBool("Dead", true);
+            deathManager.players.Add(gameObject);
         }
 
     }
