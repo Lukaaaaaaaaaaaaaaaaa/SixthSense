@@ -364,6 +364,7 @@ MonoBehaviour:
   canMove: 1
   Dead: {fileID: 5413902405747432678}
   DeadCam: {fileID: 5413902405747432678}
+  deathManager: {fileID: 0}
   playersStuff:
   - {fileID: 8319976340670860202}
   - {fileID: 3200889327680025512}

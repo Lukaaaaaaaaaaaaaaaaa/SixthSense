@@ -63,7 +63,7 @@ public class Moinster : MonoBehaviour
 
     Moinster monster;
 
-    DeathManager deathManager;
+    public DeathManager deathManager;
 
 
     PhotonView view;
@@ -259,18 +259,17 @@ public class Moinster : MonoBehaviour
         }
 
 
-        if (dead)
-        {
-            deathManager.players.Add(gameObject);
-        }
+   
 
         if (Dead.activeInHierarchy)
         {            
             dead = true;
             DeadCam.SetActive(true);
-            monster.enabled = false;
-            animator.SetBool("Dead", true);
             
+            animator.SetBool("Dead", true);
+            deathManager.players.Add(gameObject);
+            monster.enabled = false;
+
         }
 
     }
