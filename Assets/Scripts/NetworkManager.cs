@@ -68,14 +68,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
         }
-        if(playerCount.Count == 1)
+        else //if(playerCount.Count == 1)
         {
             PhotonNetwork.Instantiate("Survivor2", spawnPos, Quaternion.identity);   
         }
-        if (playerCount.Count == 2)
-        {
-            PhotonNetwork.Instantiate("Survivor3", spawnPos, Quaternion.identity);
-        }
+        //if (playerCount.Count == 2)
+        //{
+        //    PhotonNetwork.Instantiate("Survivor3", spawnPos, Quaternion.identity);
+        //}
 
 
 
