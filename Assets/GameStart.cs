@@ -38,6 +38,11 @@ public class GameStart : MonoBehaviour
             loadCam.SetActive(false);
         }
 
+        if(players.Count == 2)
+        {
+           // players[1].GetComponent<Moinster>()
+        }
+
     }
 
     public void AddPlayer(GameObject obj)
