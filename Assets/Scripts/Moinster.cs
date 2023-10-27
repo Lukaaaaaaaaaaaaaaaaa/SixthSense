@@ -42,8 +42,11 @@ public class Moinster : MonoBehaviour
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
+    
 
     public Animator animator;
+
+    public Animator animator2;
 
     public bool isMonster = false;
 
@@ -130,6 +133,8 @@ public class Moinster : MonoBehaviour
         {
             Debug.Log("Jumped");
             rb.AddForce(Vector3.up * jumpHeight);
+            
+
         }
     }
 
@@ -222,12 +227,18 @@ public class Moinster : MonoBehaviour
             animator.SetBool("IsMoving", false);
             animator.SetBool("SurvivorMoving", false);
 
+            animator2.SetBool("IsMoving", false);
+            animator2.SetBool("SurvivorMoving", false);
+
         }
 
         if (isMoving)
         {
             animator.SetBool("IsMoving", true);
             animator.SetBool("SurvivorMoving", true);
+
+            animator2.SetBool("IsMoving", true);
+            animator2.SetBool("SurvivorMoving", true);
         }
 
         if (attack)
