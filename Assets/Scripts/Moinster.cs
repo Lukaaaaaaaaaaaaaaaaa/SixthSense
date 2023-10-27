@@ -269,9 +269,10 @@ public class Moinster : MonoBehaviour
             DeadCam.SetActive(true);
             
             animator.SetBool("Dead", true);
-            deathManager.GetComponent<DeathManager>().players.Add(gameObject);
+            
             monster.enabled = false;
-          
+            deathManager.GetComponent<DeathManager>().players.Add(gameObject);
+
         }
 
     }
