@@ -42,6 +42,8 @@ public class Moinster : MonoBehaviour
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
+
+    public bool dead = false;
     
     //public bool onAttack = false;
 
@@ -257,6 +259,7 @@ public class Moinster : MonoBehaviour
 
         if (Dead.activeInHierarchy)
         {
+            dead = true;
             DeadCam.SetActive(true);
             monster.enabled = false;
             animator.SetBool("Dead", true);

@@ -24,5 +24,14 @@ public class TestAnim : MonoBehaviour
         {
             animator.SetBool("IsMoving", false);
         }
+
+        if (player.GetComponent<Moinster>().dead)
+        {
+            animator.SetBool("Dead", true);
+        }
+        else if (!player.GetComponent<Moinster>().dead)
+        {
+            animator.SetBool("Dead", false);
+        }
     }
 }

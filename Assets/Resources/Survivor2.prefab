@@ -5587,6 +5587,7 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
+  dead: 0
   animator: {fileID: 5618723276610252031}
   isMonster: 0
   canMove: 1

@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMonster: 1
-  character1: {fileID: 0}
-  character2: {fileID: 0}
+  character1: {fileID: 5413902405747432678}
+  character2: {fileID: 5413902405747432678}
 --- !u!114 &3200889327302242972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +358,7 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
+  dead: 0
   animator: {fileID: 3199220299872860608}
   isMonster: 1
   canMove: 1
