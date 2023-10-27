@@ -74,6 +74,8 @@ public class Moinster : MonoBehaviour
     private void OnEnable()
     {
         canvas.SetActive(false);
+
+        deathManager = FindObjectOfType<DeathManager>();
     }
 
     private void Start()
@@ -218,7 +220,7 @@ public class Moinster : MonoBehaviour
     
     void Update()
     {
-        deathManager = FindObjectOfType<DeathManager>();
+        
 
         GroundCheck();
         RotateCamera();
@@ -267,9 +269,9 @@ public class Moinster : MonoBehaviour
             DeadCam.SetActive(true);
             
             animator.SetBool("Dead", true);
-            deathManager.players.Add(gameObject);
+            deathManager.GetComponent<DeathManager>().players.Add(gameObject);
             monster.enabled = false;
-
+          
         }
 
     }
