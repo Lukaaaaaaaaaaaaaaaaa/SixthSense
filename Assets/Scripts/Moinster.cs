@@ -52,6 +52,7 @@ public class Moinster : MonoBehaviour
 
     //Timer timer;
 
+
     PhotonView view;
     public List<GameObject> playersStuff = new List<GameObject>();
 
@@ -65,7 +66,7 @@ public class Moinster : MonoBehaviour
     private void Start()
     {
         //LoadCam = FindObjectOfType<loadCam>();   
-       //timer = FindObjectOfType<Timer>();
+        //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
 
@@ -185,7 +186,7 @@ public class Moinster : MonoBehaviour
         {
             if (other.tag == "Player" && view.IsMine)
             {
-                GameMan.health -= 1;
+                other.gameObject.GetComponent<GameMan>().health -= 1;
                 Debug.Log("FUCKINAYYY");
             }
         }

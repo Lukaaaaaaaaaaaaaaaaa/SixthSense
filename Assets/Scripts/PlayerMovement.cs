@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.gameObject.tag == "Monster")
         {
-            GameMan.health -= 1;
+            //GameMan.health -= 1;
         }
     }
 
