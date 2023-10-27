@@ -5593,7 +5593,7 @@ MonoBehaviour:
   isMonster: 0
   canMove: 1
   Dead: {fileID: 4326216934941723982}
-  DeadCam: {fileID: 0}
+  DeadCam: {fileID: 2466625421207089569}
   playersStuff:
   - {fileID: 4326216935413264722}
   - {fileID: 7139444444372502864}

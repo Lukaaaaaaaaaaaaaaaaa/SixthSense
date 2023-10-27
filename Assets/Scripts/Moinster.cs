@@ -59,6 +59,8 @@ public class Moinster : MonoBehaviour
 
     //Timer timer;
 
+    Moinster monster;
+
 
     PhotonView view;
     public List<GameObject> playersStuff = new List<GameObject>();
@@ -72,6 +74,7 @@ public class Moinster : MonoBehaviour
 
     private void Start()
     {
+        monster = this;
         //LoadCam = FindObjectOfType<loadCam>();   
         //timer = FindObjectOfType<Timer>();
         view = GetComponent<PhotonView>();
@@ -255,8 +258,9 @@ public class Moinster : MonoBehaviour
 
         if (Dead.activeInHierarchy)
         {
+            monster.enabled = false;
             DeadCam.SetActive(true);
-            this.enabled = false;
+            
         }
 
     }
