@@ -27,7 +27,7 @@ public class DIE : MonoBehaviour
         {
             //isDead = true;
 
-            transform.gameObject.tag = "Dead";
+           gameObject.tag = "Dead";
             //if (!deathManager.players.Contains(playerMan))
             //{
             //    deathManager.players.Add(playerMan);
