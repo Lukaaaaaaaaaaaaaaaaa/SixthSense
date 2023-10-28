@@ -10,6 +10,8 @@ public class GameMan : MonoBehaviour
     public GameObject gameOver, heart0, heart1, heart2, heart3;
     public int health; //static int health;
 
+
+
     public void SendDamage()
     {
         view.RPC("TakeDamage", RpcTarget.Others);
