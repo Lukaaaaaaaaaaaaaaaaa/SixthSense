@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class DeathManager : MonoBehaviour
 {
     public List<GameObject> players = new List<GameObject>();
+
+    public Timer timer;
     void Start()
     {
         
@@ -16,7 +18,7 @@ public class DeathManager : MonoBehaviour
     {
         if(players.Count == 2)
         {
-            SceneManager.LoadScene(4);
+            timer.TimeLeft = 0;
         }
     }
 }
