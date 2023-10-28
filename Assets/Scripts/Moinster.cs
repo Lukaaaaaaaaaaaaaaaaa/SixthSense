@@ -64,7 +64,7 @@ public class Moinster : MonoBehaviour
 
     Moinster monster;
 
-   
+    public GameMan health;
 
 
     PhotonView view;
@@ -288,6 +288,7 @@ public class Moinster : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         animator.SetBool("Dead", false);
+        health.health = 4;
         canMove = true;
         canSprint = true;
 
