@@ -12,6 +12,8 @@ public class DIE : MonoBehaviour
 
     public GameObject playerMan;
 
+    public bool isDead = false;
+
     void Start()
     {
         player = GetComponent<Moinster>();
@@ -23,11 +25,13 @@ public class DIE : MonoBehaviour
     {
         if (health.health == 0)
         {
-            if (!deathManager.players.Contains(playerMan))
-            {
-                deathManager.players.Add(playerMan);
-            }
+            isDead = true;
+            //if (!deathManager.players.Contains(playerMan))
+            //{
+            //    deathManager.players.Add(playerMan);
+            //}
             
+
         }
     }
 }
