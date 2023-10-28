@@ -46,79 +46,74 @@ public class GameMan : MonoBehaviour
         if (view.IsMine == false)
             return;
 
-        //switch (health)
-        //{
-        //    case 4:
-        //        heart0.gameObject.SetActive(true);
-        //        heart1.gameObject.SetActive(true);
-        //        heart2.gameObject.SetActive(true);
-        //        heart3.gameObject.SetActive(true);
-        //        break;
-        //    case 3:
-        //        heart0.gameObject.SetActive(true);
-        //        heart1.gameObject.SetActive(true);
-        //        heart2.gameObject.SetActive(true);
-        //        heart3.gameObject.SetActive(false);
-        //        break;
-        //    case 2:
-        //        heart0.gameObject.SetActive(true);
-        //        heart1.gameObject.SetActive(true);
-        //        heart2.gameObject.SetActive(true);
-        //        heart3.gameObject.SetActive(false);
-        //        break;
-        //    case 1:
-        //        heart0.gameObject.SetActive(true);
-        //        heart1.gameObject.SetActive(true);
-        //        heart2.gameObject.SetActive(false);
-        //        heart3.gameObject.SetActive(false);
-        //        break;
-        //    case 0:
-        //        heart0.gameObject.SetActive(true);
-        //        heart1.gameObject.SetActive(true);
-        //        heart2.gameObject.SetActive(false);
-        //        heart3.gameObject.SetActive(false);
-        //        break;
-        //    default:
-        //        heart0.gameObject.SetActive(false);
-        //        heart1.gameObject.SetActive(false);
-        //        heart2.gameObject.SetActive(false);
-        //        heart3.gameObject.SetActive(false);
-        //        gameOver.gameObject.SetActive(true);
-              
-        //        break;
+        if (view.IsMine)
+        {
+            if (health == 3)
+            {
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(true);
+                gameOver.gameObject.SetActive(false);
+            }
+        }
 
-        //}
+        if (view.IsMine)
+        {
+            if(health == 0)
+            {
+                gameOver.gameObject.SetActive(true);
+            }
+            else
+            {
+                gameOver.gameObject.SetActive(false);
+            }
+        }
+
+        switch (health)
+        {
+            case 4:
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(true);
+                break;
+            case 3:
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(false);
+                break;
+            case 2:
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(false);
+                break;
+            case 1:
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                break;
+            case 0:
+                heart0.gameObject.SetActive(true);
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                break;
+            default:
+                heart0.gameObject.SetActive(false);
+                heart1.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);                
+
+                break;
+
+        }
 
 
-        if (health == 3)
-        {
-            //heart0.gameObject.SetActive(true);
-            heart1.gameObject.SetActive(true);
-            heart2.gameObject.SetActive(true);
-            heart3.gameObject.SetActive(true);
-        }
-        if (health == 2)
-        {
-            //heart0.gameObject.SetActive(true);
-            heart1.gameObject.SetActive(true);
-            heart2.gameObject.SetActive(true);
-            heart3.gameObject.SetActive(false);
-        }
-        if (health == 1)
-        {
-            //heart0.gameObject.SetActive(true);
-            heart1.gameObject.SetActive(true);
-            heart2.gameObject.SetActive(false);
-            heart3.gameObject.SetActive(false);
-        }
-        if (health == 0)
-        {
-            //heart0.gameObject.SetActive(true);
-            heart1.gameObject.SetActive(false);
-            heart2.gameObject.SetActive(false);
-            heart3.gameObject.SetActive(false);
-            gameOver.SetActive(true);
-        }
+
 
     }
 }
