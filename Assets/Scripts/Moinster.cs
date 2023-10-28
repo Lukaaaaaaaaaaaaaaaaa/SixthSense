@@ -229,7 +229,11 @@ public class Moinster : MonoBehaviour
     void Update()
     {
 
-        DeadPlayer();
+        if (Dead.activeInHierarchy)
+        {
+            DeadPlayer();
+        }
+        
 
         GroundCheck();
         RotateCamera();
@@ -280,21 +284,19 @@ public class Moinster : MonoBehaviour
 
     public void DeadPlayer()
     {
-        if (Dead.activeInHierarchy)
-        {
-            DeadCam.SetActive(true);
-            animator.SetBool("Dead", true);
-            //monster.enabled = false;
-            canMove = false;
-            canSprint = false;
-            canJump = false;
-            StartCoroutine(RespawnCoroutine());
-        }
+        DeadCam.SetActive(true);
+        animator.SetBool("Dead", true);
+        //monster.enabled = false;
+        canMove = false;
+        canSprint = false;
+        canJump = false;
+        StartCoroutine(RespawnCoroutine());
     }
 
     IEnumerator RespawnCoroutine()
     {
         yield return new WaitForSeconds(10);
+        DeadCam.SetActive(false);
         Dead.SetActive(false);
         animator.SetBool("Dead", false);
         health.health = 4;
