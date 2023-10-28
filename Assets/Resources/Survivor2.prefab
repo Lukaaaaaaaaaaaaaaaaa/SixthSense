@@ -3354,6 +3354,7 @@ MonoBehaviour:
   canSprint: 1
   isMoving: 0
   loseStamina: 0
+  canJump: 1
   isDead: 0
   animator: {fileID: 5618723276610252031}
   isMonster: 0
@@ -3383,7 +3384,7 @@ MonoBehaviour:
   heart1: {fileID: 7798221764438777835}
   heart2: {fileID: 4326216935282325742}
   heart3: {fileID: 864183348539489682}
-  health: 4
+  health: 3
 --- !u!136 &3651939027160211737
 CapsuleCollider:
   m_ObjectHideFlags: 0
