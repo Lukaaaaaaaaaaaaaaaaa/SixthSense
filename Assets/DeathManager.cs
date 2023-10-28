@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class DeathManager : MonoBehaviour
 {
-    public List<GameObject> players = new List<GameObject>();
+    //public List<GameObject> players = new List<GameObject>();
 
-    public List<DIE> playerDie = new List<DIE>();
+    public GameObject[] players;
 
     public Timer timer;
     void Start()
@@ -18,27 +18,14 @@ public class DeathManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Dead");
 
-        DIE[] die = GameObject.FindObjectsOfType<DIE>();
-
-
-        for(int i = 0; i < die.Length; i++)
-        {
-            
-
-            if (die[i].isDead == true)
-            {
-                playerDie.Add(die[i]);
-            }
-        }
-
-       
-        
-
-
-        if(players.Count == 2)
+        if(players.Length == 2)
         {
             timer.TimeLeft = 0;
         }
     }
+
+
+   
 }

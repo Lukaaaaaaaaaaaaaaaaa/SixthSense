@@ -12,7 +12,7 @@ public class DIE : MonoBehaviour
 
     public GameObject playerMan;
 
-    public bool isDead = false;
+    //public bool isDead = false;
 
     void Start()
     {
@@ -25,7 +25,9 @@ public class DIE : MonoBehaviour
     {
         if (health.health == 0)
         {
-            isDead = true;
+            //isDead = true;
+
+            transform.gameObject.tag = "Dead";
             //if (!deathManager.players.Contains(playerMan))
             //{
             //    deathManager.players.Add(playerMan);
