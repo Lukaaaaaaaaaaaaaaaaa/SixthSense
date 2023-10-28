@@ -337,13 +337,13 @@ public class Moinster : MonoBehaviour
                 {
                     actualDirection *= Time.fixedDeltaTime * runSpeed;
                     loseStamina = true;
-                    source.Play();
+                    //source.Play();
                 }
             }
             else
             {
                 loseStamina = false;
-                source.Stop();
+               // source.Stop();
             }
 
             rb.MovePosition(transform.position + actualDirection);

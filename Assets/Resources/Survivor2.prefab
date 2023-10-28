@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 100
   staminaBar: {fileID: 8552412211922935759}
-  dValue: 10
+  dValue: 20
   decreaseStamina: 0
   monster: {fileID: 519391442579211266}
   survivor: {fileID: 0}
@@ -3532,6 +3532,7 @@ MonoBehaviour:
   - {fileID: 7139444444372502864}
   - {fileID: 7139444444513868235}
   - {fileID: 4326216935933806754}
+  source: {fileID: 0}
 --- !u!114 &5433787991058213116
 MonoBehaviour:
   m_ObjectHideFlags: 0
