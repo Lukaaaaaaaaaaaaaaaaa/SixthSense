@@ -58,17 +58,6 @@ public class GameMan : MonoBehaviour
             }
         }
 
-        if (view.IsMine)
-        {
-            if(health == 0)
-            {
-                gameOver.gameObject.SetActive(true);
-            }
-            else
-            {
-                gameOver.gameObject.SetActive(false);
-            }
-        }
 
         switch (health)
         {
@@ -106,7 +95,8 @@ public class GameMan : MonoBehaviour
                 heart0.gameObject.SetActive(false);
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
-                heart3.gameObject.SetActive(false);                
+                heart3.gameObject.SetActive(false);
+                gameOver.gameObject.SetActive(true);
 
                 break;
 
