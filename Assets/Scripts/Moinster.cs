@@ -72,6 +72,8 @@ public class Moinster : MonoBehaviour
     public List<GameObject> playersStuff = new List<GameObject>();
 
 
+    public AudioSource source;
+
 
     private void OnEnable()
     {
@@ -335,11 +337,13 @@ public class Moinster : MonoBehaviour
                 {
                     actualDirection *= Time.fixedDeltaTime * runSpeed;
                     loseStamina = true;
+                    source.Play();
                 }
             }
             else
             {
                 loseStamina = false;
+                source.Stop();
             }
 
             rb.MovePosition(transform.position + actualDirection);
