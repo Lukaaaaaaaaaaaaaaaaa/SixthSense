@@ -8,6 +8,10 @@ public class DIE : MonoBehaviour
 
     public DeathManager deathManager;
 
+    public GameMan health;
+
+    public GameObject playerMan;
+
     void Start()
     {
         player = GetComponent<Moinster>();
@@ -17,11 +21,11 @@ public class DIE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<Moinster>().Dead.activeInHierarchy)
+        if (health.health == 0)
         {
-            if (!deathManager.players.Contains(gameObject))
+            if (!deathManager.players.Contains(playerMan))
             {
-                deathManager.players.Add(gameObject);
+                deathManager.players.Add(playerMan);
             }
             
         }
