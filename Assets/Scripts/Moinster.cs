@@ -257,7 +257,7 @@ public class Moinster : MonoBehaviour
         {
             canSprint = false;
             animator.SetBool("IsMoving", false);
-            animator.SetBool("SurvivorMoving", false);
+            //animator.SetBool("SurvivorMoving", false);
 
             //animator2.SetBool("IsMoving", false);
             //animator2.SetBool("SurvivorMoving", false);
@@ -267,7 +267,7 @@ public class Moinster : MonoBehaviour
         if (isMoving)
         {
             animator.SetBool("IsMoving", true);
-            animator.SetBool("SurvivorMoving", true);
+          //  animator.SetBool("SurvivorMoving", true);
 
             //animator2.SetBool("IsMoving", true);
             //animator2.SetBool("SurvivorMoving", true);
