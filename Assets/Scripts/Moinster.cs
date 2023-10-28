@@ -42,6 +42,7 @@ public class Moinster : MonoBehaviour
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
+    public bool canJump = true;
 
     public bool isDead;
 
@@ -64,7 +65,7 @@ public class Moinster : MonoBehaviour
 
     Moinster monster;
 
-   
+    public GameMan health;
 
 
     PhotonView view;
@@ -146,8 +147,14 @@ public class Moinster : MonoBehaviour
 
         if (isGrounded)
         {
-            Debug.Log("Jumped");
-            rb.AddForce(Vector3.up * jumpHeight);
+            canJump = true;
+            if (canJump)
+            {
+                Debug.Log("Jumped");
+                rb.AddForce(Vector3.up * jumpHeight);
+                canJump = false;
+            }
+            
             
 
         }
@@ -224,14 +231,9 @@ public class Moinster : MonoBehaviour
 
         if (Dead.activeInHierarchy)
         {
-            DeadCam.SetActive(true);
-            if (!isDead)
-            {
-                isDead = true;
-            }
-            animator.SetBool("Dead", true);
-            monster.enabled = false;
+            DeadPlayer();
         }
+        
 
         GroundCheck();
         RotateCamera();
@@ -280,6 +282,30 @@ public class Moinster : MonoBehaviour
 
     }
 
+    public void DeadPlayer()
+    {
+        DeadCam.SetActive(true);
+        animator.SetBool("Dead", true);
+        //monster.enabled = false;
+        canMove = false;
+        canSprint = false;
+        canJump = false;
+        StartCoroutine(RespawnCoroutine());
+    }
+
+    IEnumerator RespawnCoroutine()
+    {
+        yield return new WaitForSeconds(10);
+        //health.health = 4;
+        DeadCam.SetActive(false);
+        Dead.SetActive(false);
+        animator.SetBool("Dead", false);
+        //health.health = 4;
+        canMove = true;
+        canSprint = true;
+        canJump = true;
+
+    }
     private void FixedUpdate()
     {
         

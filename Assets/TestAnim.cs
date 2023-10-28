@@ -7,6 +7,8 @@ public class TestAnim : MonoBehaviour
 
     public Moinster player;
     Animator animator;
+
+    public GameMan man;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,20 @@ public class TestAnim : MonoBehaviour
             animator.SetBool("IsMoving", false);
         }
 
-        if (player.GetComponent<Moinster>().isDead)
+        if (man.health == 0)
         {
             animator.SetBool("Dead", true);
+            StartCoroutine(RespawnCoroutine());
         }
-        else if (!player.GetComponent<Moinster>().isDead)
-        {
-            animator.SetBool("Dead", false);
-        }
+
+    }
+
+    IEnumerator RespawnCoroutine()
+    {
+        yield return new WaitForSeconds(10);
+       
+        animator.SetBool("Dead", false);
+   
+
     }
 }

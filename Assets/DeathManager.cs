@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class DeathManager : MonoBehaviour
 {
-    public List<GameObject> players = new List<GameObject>();
+    //public List<GameObject> players = new List<GameObject>();
+
+    public GameObject[] players;
+
+    public Timer timer;
     void Start()
     {
         
@@ -14,9 +18,15 @@ public class DeathManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(players.Count == 2)
+        players = GameObject.FindGameObjectsWithTag("Dead");
+
+
+        if(players.Length == 2)
         {
-            SceneManager.LoadScene(4);
+            timer.TimeLeft = 0;
         }
     }
+
+
+   
 }

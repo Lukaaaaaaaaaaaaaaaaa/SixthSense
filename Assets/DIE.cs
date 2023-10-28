@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
 
 public class DIE : MonoBehaviour
 {
     public Moinster player;
 
     public DeathManager deathManager;
+
+    public GameMan health;
+
+    public GameObject playerMan;
+
+
+    //public bool isDead = false;
 
     void Start()
     {
@@ -17,13 +25,17 @@ public class DIE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<Moinster>().Dead.activeInHierarchy)
+        if (health.health == 0)
         {
-            if (!deathManager.players.Contains(gameObject))
-            {
-                deathManager.players.Add(gameObject);
-            }
+            //isDead = true;
+
+           playerMan.tag = "Dead";
+            //if (!deathManager.players.Contains(playerMan))
+            //{
+            //    deathManager.players.Add(playerMan);
+            //}
             
+
         }
     }
 }
