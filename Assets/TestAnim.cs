@@ -30,10 +30,17 @@ public class TestAnim : MonoBehaviour
         if (man.health == 0)
         {
             animator.SetBool("Dead", true);
+            StartCoroutine(RespawnCoroutine());
         }
-        else if (man.health > 0)
-        {
-            animator.SetBool("Dead", false);
-        }
+
+    }
+
+    IEnumerator RespawnCoroutine()
+    {
+        yield return new WaitForSeconds(10);
+       
+        animator.SetBool("Dead", false);
+   
+
     }
 }
