@@ -9,7 +9,10 @@ public class KeyManager : MonoBehaviour
 
     public GameObject door;
 
-    
+    public GameObject door2;
+
+
+
 
     void Start()
     {
