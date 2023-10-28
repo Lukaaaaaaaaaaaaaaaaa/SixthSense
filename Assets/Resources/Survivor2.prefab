@@ -3280,7 +3280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMonster: 1
   character1: {fileID: 7159316154056342583}
-  character2: {fileID: 0}
+  character2: {fileID: 7159316154056342583}
 --- !u!114 &7139444444816803940
 MonoBehaviour:
   m_ObjectHideFlags: 0

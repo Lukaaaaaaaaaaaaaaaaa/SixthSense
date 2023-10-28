@@ -30,8 +30,8 @@ public class PlayerNetwork : MonoBehaviour
                 GetComponent<Survivor>().enabled = true;
             }
 
-           // randomRoll = Random.Range(0, 100);
-           // SetPlayerCharacter();
+            randomRoll = Random.Range(0, 100);
+            SetPlayerCharacter();
         }
         else
         {
@@ -49,31 +49,31 @@ public class PlayerNetwork : MonoBehaviour
 
     }
 
-    //public void SetPlayerCharacter()
-    //{
-    //    if(randomRoll > 50)
-    //    {
-    //        character1.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        character2.SetActive(false);
-    //    }
+    public void SetPlayerCharacter()
+    {
+        if(randomRoll > 50)
+        {
+            character1.SetActive(false);
+        }
+        else
+        {
+            character2.SetActive(false);
+        }
 
-    //    photonView.RPC("SendPlayerCharacter", RpcTarget.Others, randomRoll);
-    //}
+        photonView.RPC("SendPlayerCharacter", RpcTarget.Others, randomRoll);
+    }
 
-    //[PunRPC]
-    //public void SendPlayerCharacter(int roll)
-    //{
-    //    randomRoll = roll;
-    //    if (randomRoll > 50)
-    //    {
-    //        character1.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        character2.SetActive(false);
-    //    }
-    //}
+    [PunRPC]
+    public void SendPlayerCharacter(int roll)
+    {
+        randomRoll = roll;
+        if (randomRoll > 50)
+        {
+            character1.SetActive(false);
+        }
+        else
+        {
+            character2.SetActive(false);
+        }
+    }
 }
