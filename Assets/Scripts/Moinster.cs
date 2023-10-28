@@ -42,6 +42,7 @@ public class Moinster : MonoBehaviour
     public bool canSprint = true;
     public bool isMoving = false;
     public bool loseStamina = false;
+    public bool canJump = true;
 
     public bool isDead;
 
@@ -146,8 +147,14 @@ public class Moinster : MonoBehaviour
 
         if (isGrounded)
         {
-            Debug.Log("Jumped");
-            rb.AddForce(Vector3.up * jumpHeight);
+            canJump = true;
+            if (canJump)
+            {
+                Debug.Log("Jumped");
+                rb.AddForce(Vector3.up * jumpHeight);
+                canJump = false;
+            }
+            
             
 
         }
@@ -280,6 +287,7 @@ public class Moinster : MonoBehaviour
             //monster.enabled = false;
             canMove = false;
             canSprint = false;
+            canJump = false;
             StartCoroutine(RespawnCoroutine());
         }
     }
@@ -287,10 +295,12 @@ public class Moinster : MonoBehaviour
     IEnumerator RespawnCoroutine()
     {
         yield return new WaitForSeconds(10);
+        Dead.SetActive(false);
         animator.SetBool("Dead", false);
         health.health = 4;
         canMove = true;
         canSprint = true;
+        canJump = true;
 
     }
     private void FixedUpdate()

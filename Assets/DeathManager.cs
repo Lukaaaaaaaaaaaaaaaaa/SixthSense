@@ -20,6 +20,7 @@ public class DeathManager : MonoBehaviour
     {
         players = GameObject.FindGameObjectsWithTag("Dead");
 
+
         if(players.Length == 2)
         {
             timer.TimeLeft = 0;
