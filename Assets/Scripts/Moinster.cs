@@ -296,11 +296,11 @@ public class Moinster : MonoBehaviour
     IEnumerator RespawnCoroutine()
     {
         yield return new WaitForSeconds(10);
-        health.health = 4;
+        //health.health = 4;
         DeadCam.SetActive(false);
         Dead.SetActive(false);
         animator.SetBool("Dead", false);
-        health.health = 4;
+        //health.health = 4;
         canMove = true;
         canSprint = true;
         canJump = true;
