@@ -14,6 +14,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public float maxY;
     public float maxZ;
 
+    public float minXx;
+    public float minYy;
+    public float minZz;
+    public float maxXx;
+    public float maxYy;
+    public float maxZz;
+
     public GameObject playerPrefab;
 
     public string gameVersion;
@@ -64,9 +71,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), Random.Range(minZ, maxZ), Random.Range(minY, maxY));
 
+        Vector3 spawnPose = new Vector3(Random.Range(minXx, maxXx), Random.Range(minZz, maxZz), Random.Range(minYy, maxYy));
+
+
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("Monster", spawnPos, Quaternion.identity);
+            PhotonNetwork.Instantiate("Survivor2", spawnPose, Quaternion.identity);
         }
         else //if(playerCount.Count == 1)
         {
