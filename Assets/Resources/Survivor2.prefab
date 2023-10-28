@@ -3381,7 +3381,7 @@ MonoBehaviour:
   heart1: {fileID: 7798221764438777835}
   heart2: {fileID: 4326216935282325742}
   heart3: {fileID: 864183348539489682}
-  health: 0
+  health: 4
 --- !u!136 &3651939027160211737
 CapsuleCollider:
   m_ObjectHideFlags: 0
