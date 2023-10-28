@@ -16,9 +16,11 @@ public class WinCon : MonoBehaviour
     {
         if (collider.gameObject.tag == ("Player"))
         {
+            winCube.SetActive(true);
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-            winCube.SetActive(true); 
+            
 
             Debug.Log("worky");
         }
